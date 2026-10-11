@@ -1,0 +1,376 @@
+/* ==========================================================================
+   REFERENCIA DE PALETA DE COLORES (Punto 4)
+   Paleta seleccionada de Color Hunt (Estilo Dark Stream / Netflix Premium):
+   - Fondo Principal: #141414 (Negro profundo)
+   - Superficie/Tarjetas: #1f1f23 (Gris oscuro azulado)
+   - Color de Acento: #e50914 (Rojo vibrante para interactividad)
+   - Texto Principal: #ffffff (Blanco puro)
+   - Texto Secundario: #aaaaaa (Gris suave para jerarquía)
+   ========================================================================== */
+
+/* 1. SELECTOR UNIVERSAL (Punto 1) y UNIDADES RELATIVAS (Punto 3) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. SELECTOR DE TIPO (Punto 1) y VARIABLES CSS (Mantenibilidad) */
+:root {
+    --bg-main: #141414;          
+    --bg-surface: #1f1f23;       
+    --color-accent: #e50914;      
+    --text-main: #ffffff;
+    --text-muted: #aaaaaa;
+    /* PUNTO 9: TRANSICIÓN ESTÁNDAR REUTILIZABLE */
+    --transition-standard: all 0.3s ease; 
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    /* PUNTO 5: UTILIZAR TIPOGRAFÍA DE GOOGLE FONTS (Inter como base) */
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    min-height: 100vh; /* UNIDAD RELATIVA: vh para adaptarse a pantallas (Punto 3) */
+}
+
+/* 3. SELECTORES DE CLASE (Punto 1) y UNIDADES % (Punto 3) */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* PUNTO 7: APLICAR PADDING Y DISEÑO A LOS BORDES (ANCHO, ESTILO Y COLOR) */
+    padding: 1rem 4%; /* UNIDADES RELATIVAS: rem para espaciado y % para el ancho elástico (Punto 3) */
+    background-color: #000000; 
+    border-bottom: 2px solid var(--bg-surface); /* UNIDAD ABSOLUTA: 2px fija para bordes limpios (Punto 3) */
+}
+
+.brand-name {
+    /* PUNTO 5: SEGUNDA TIPOGRAFÍA DE GOOGLE FONTS PARA EL LOGO */
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-accent); 
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.search-box {
+    position: relative;
+}
+
+/* SELECTOR AVANZADO: Hijo directo (Punto 2) */
+/* PUNTO 6: ESTILOS PARA LOS ICONOS (FONT AWESOME SE TRADUCE EN LA ETIQUETA I) */
+.search-box > i {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+/* 4. SELECTOR POR ID (Punto 1) y UNIDAD ABSOLUTA (Punto 3) */
+#main-search {
+    background-color: var(--bg-surface);
+    /* PUNTO 7: DISEÑO DE BORDES EN INPUTS */
+    border: 1px solid #333333;
+    color: var(--text-main);
+    padding: 0.5rem 1rem 0.5rem 2.2rem;
+    border-radius: 4px; 
+    width: 200px; /* UNIDAD ABSOLUTA: px para mantener el tamaño del input controlado (Punto 3) */
+    /* PUNTO 9: TRANSICIÓN SUAVE AL HACER FOCO */
+    transition: var(--transition-standard);
+}
+
+/* SELECTOR AVANZADO: Pseudo-clase de estado (Punto 2) */
+/* PUNTO 8: APLICAR AL MENOS UNA PSEUDOCLASE (:focus) */
+#main-search:focus {
+    outline: none;
+    border-color: var(--color-accent); 
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+/* PUNTO 6: SOPORTE PARA ICONOS DE NOTIFICACIONES (FONT AWESOME) */
+.btn-notif {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-standard);
+}
+
+/* PUNTO 8: PSEUDOCLASE EN ICONO DE NOTIFICACIÓN */
+.btn-notif:hover {
+    color: var(--color-accent);
+    /* PUNTO 9: TRANSFORMACIÓN EN COMPONENTE DE NAVEGACIÓN */
+    transform: scale(1.1);
+}
+
+.profile-avatar {
+    width: 34px; /* UNIDAD ABSOLUTA: px para que la foto de perfil no se deforme (Punto 3) */
+    height: 34px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.8rem 4%;
+    background-color: var(--bg-surface);
+}
+
+.nav-title {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: var(--transition-standard);
+}
+
+/* SELECTOR AVANZADO: Combinación de pseudo-clases :hover y de estado .active (Punto 2) */
+.nav-link:hover, .nav-link.active {
+    background-color: var(--color-accent);
+    color: #ffffff;
+}
+
+.content-wrapper {
+    max-width: 1400px;         
+    margin: 0 auto;            
+    padding: 2rem 4%;          
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    /* PUNTO 7: APLICAR MÁRGENES PARA CONTROLAR SEPARACIÓN DE CONTENEDORES */
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* PUNTO 8: APLICAR AL MENOS UN PSEUDOELEMENTO (Línea decorativa roja debajo del título) */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-accent);
+    border-radius: 2px;
+}
+
+.catalog-section {
+    /* PUNTO 7: MARGEN INFERIOR EN SECCIONES */
+    margin-bottom: 2.5rem;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.movie-card {
+    background-color: var(--bg-surface); 
+    border-radius: 8px; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    /* PUNTO 9: TRANSICIÓN SUAVE CONFIGURADA EN LA TARJETA */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* SELECTOR AVANZADO: Pseudo-clase :hover en contenedor (Punto 2) */
+.movie-card:hover {
+    /* PUNTO 9: TRANSFORMACIÓN DE ESCALA AL PASAR EL MOUSE (Efecto Hover Premium) */
+    transform: scale(1.04); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.movie-image-wrapper {
+    position: relative; 
+    width: 100%;
+    padding-top: 56.25%; /* Relación de aspecto 16:9 elástica (Punto 3) */
+    overflow: hidden;
+}
+
+.movie-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* SELECTOR AVANZADO: Descendiente compuesto con pseudo-clase (Punto 2) */
+.movie-card:hover .movie-card-img {
+    opacity: 0.6; 
+    filter: brightness(0.7); 
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+}
+
+.movie-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-btn {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%; 
+    /* PUNTO 6: COLOR Y TAMAÑO PARA EL ICONO DE REPRODUCCIÓN (FONT AWESOME) */
+    color: #141414; 
+    font-size: 1.4rem; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* PUNTO 9: TRANSICIÓN EN EL BOTÓN DE PLAY */
+    transition: var(--transition-standard);
+}
+
+.play-btn:hover {
+    background-color: var(--color-accent); 
+    color: #ffffff;
+    /* PUNTO 9: TRANSFORMACIÓN ADICIONAL EN HOVER DE PLAY */
+    transform: scale(1.1); 
+}
+
+.movie-info {
+    /* PUNTO 7: PADDING INTERNO PARA ORGANIZAR LA INFORMACIÓN DE LA PELÍCULA */
+    padding: 12px 15px 15px;
+}
+
+.movie-genre {
+    color: var(--color-accent); 
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.movie-title {
+    color: var(--text-main); 
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 3px; 
+}
+
+.main-footer {
+    background-color: #0b0b0b;
+    padding: 2rem 4%;
+    text-align: center;
+    /* PUNTO 7: DISEÑO DE BORDE EN DIV SUPERIOR DEL FOOTER */
+    border-top: 1px solid #222222;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+/* SELECTOR AVANZADO: Descendiente etiqueta dentro de clase (Punto 2) */
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    transition: var(--transition-standard);
+}
+
+.footer-links a:hover {
+    color: var(--text-main);
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: #555555;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - MEDIA QUERIES (3 PUNTOS DE CONTROL EXIGIDOS)
+   ========================================================================== */
+
+aside, .sidebar-aside {
+    display: none; 
+}
+
+/* --- PUNTO DE CONTROL 1: PC MEDIANA / TABLET LANDSCAPE --- */
+@media screen and (max-width: 1024px) {
+    .content-wrapper {
+        padding: 1.5rem 4%;
+    }
+    #main-search {
+        width: 170px;
+    }
+}
+
+/* --- PUNTO DE CONTROL 2: TABLET PORTRAIT / MOBILE GRANDE --- */
+@media screen and (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+    .user-menu {
+        width: 100%;
+        justify-content: center;
+    }
+    #main-search {
+        width: 100%;
+        max-width: 280px;
+    }
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .catalog-grid {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1

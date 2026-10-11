@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlickFlow // Future Cinema</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="brand">
+            <h1 class="brand-name">FlickFlow</h1>
+        </div>
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" id="main-search" placeholder="Buscar película...">
+        </div>
+        <div class="user-menu">
+            <button class="btn-notif">
+                <i class="fa-solid fa-bell"></i>
+                <span>(•) Notif</span>
+            </button>
+            <div class="profile-avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Foto de perfil de usuario" class="avatar-img">
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <span class="nav-title">Categorías:</span>
+        <ul class="nav-list">
+            <li><a href="#" class="nav-link active">Acción</a></li>
+            <li><a href="#" class="nav-link">Drama</a></li>
+            <li><a href="#" class="nav-link">Comedia</a></li>
+            <li><a href="#" class="nav-link">Ciencia Ficción</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-wrapper">
+
+        <section class="catalog-section">
+            <h2 class="section-title">Películas Tendencia</h2>
+            
+            <div class="catalog-grid">
+                
+                <article class="movie-card">
+                    <div class="movie-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500" alt="Portada de Neon Horizon 2049" class="movie-card-img">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <span class="movie-genre">Ciencia Ficción</span>
+                        <h3 class="movie-title">Neon Horizon 2049</h3>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500" alt="Portada de Ecos del Pasado" class="movie-card-img">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <span class="movie-genre">Drama</span>
+                        <h3 class="movie-title">Ecos del Pasado</h3>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=500" alt="Portada de Furia Anfíbia" class="movie-card-img">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <span class="movie-genre">Acción</span>
+                        <h3 class="movie-title">Furia Anfíbia</h3>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=500" alt="Portada de Casi Famosos" class="movie-card-img">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <span class="movie-genre">Comedia</span>
+                        <h3 class="movie-title">Casi Famosos</h3>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <h2 class="section-title">Continuar Viendo</h2>
+            
+            <div class="catalog-grid">
+                
+                <article class="movie-card">
+                    <div class="movie-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500" alt="Portada de Líneas de Código" class="movie-card-img">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <span class="movie-genre">Thriller</span>
+                        <h3 class="movie-title">Líneas de Código</h3>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500" alt="Portada de Retro Cinema" class="movie-card-img">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <span class="movie-genre">Clásico</span>
+                        <h3 class="movie-title">Retro Cinema</h3>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=500" alt="Portada de Espacio Profundo" class="movie-card-img">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <span class="movie-genre">Aventura</span>
+                        <h3 class="movie-title">Espacio Profundo</h3>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500" alt="Portada de Portales" class="movie-card-img">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <span class="movie-genre">Fantasía</span>
+                        <h3 class="movie-title">Portales</h3>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <ul class="footer-links">
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+        <p class="footer-copy">&copy; 2026 CINE-STREAM. ITSE Programación III.</p>
+    </footer >
+
+</body>
+</html>
